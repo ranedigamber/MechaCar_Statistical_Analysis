@@ -33,10 +33,15 @@ The following picture provides the summary stats for all the manufacturing lots.
 
 ![Summary_suspension_coils](https://user-images.githubusercontent.com/107159218/191882481-805ec97a-9b26-4c45-993d-0f507d71e4eb.PNG)
 
+The follwing picture provides a summary stats for the lot.
 
-  * This election saw a good voter turnout and a total of **369,711** votes were casted across three counties. 
+![suspension_lot_summary](https://user-images.githubusercontent.com/107159218/191882704-21073676-ac4d-4544-bf51-55549308bef0.PNG)
 
-### Summary of number of votes and the percentage of total votes for each county in the precinct
+1. The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+The variance of the total manufacturing is 62 which is less than the specification (less than 100) and meets the set criteria. However upon inspecting the variance in the lot we see that the numbers for Lot3 is almost twice the specifications. Lot1 and Lot2 are well within specification
+
+## Deliverable3: T-test on Suspension Coils
+As seen from the picture below. 
   * The result of the number of votes cast and percentage of total votes are as follows:
     * Denver county: 82.8% (306,055)
     * Jefferson county: 10.5% (38,855)
