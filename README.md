@@ -41,47 +41,35 @@ The follwing picture provides a summary stats for the lot.
 The variance of the total manufacturing is 62 which is less than the specification (less than 100) and meets the set criteria. However upon inspecting the variance in the lot we see that the numbers for Lot3 is almost twice the specifications. Lot1 and Lot2 are well within specification
 
 ## Deliverable3: T-test on Suspension Coils
-As seen from the picture below. 
-  * The result of the number of votes cast and percentage of total votes are as follows:
-    * Denver county: 82.8% (306,055)
-    * Jefferson county: 10.5% (38,855)
-    * Arapahoe county: 6.7% (24,801)
+As seen from the picture below. The t-test for all manufacturing lot yielded a p-value=1 which is greater than alpha = 0.05. This indicates that there is no difference between the means and we can reject the null hypothesis
 
-### County with largest number of votes
-  * **Denver county** had the largest voter turnout
 
-### Summary of number of votes and the percentage of total votes for each candidates overall
-  * The following is the tabulated result for total votes and percentage of the total for the three candidates:
-    * **Diana DeGette: 73.8% (272,892)**
-    * Charles Casper Stockham: 23.0% (85,213)
-    * Raymon Anthony Doane: 3.1% (11,606) 
+  ![t-test_allLots](https://user-images.githubusercontent.com/107159218/191884749-a0819c01-859b-4d05-aa80-8dff8ad29634.PNG)
 
-### Election outcome
-  * The winner for this election was:
-    * ***Diana DeGette*** who received **272,892** votes which was **73.8%** of the total votes casted.
+For Lot1: The p-value=1.56e-11 is substantially lower than the alpha= 0.05. This indicates that there is difference between the means and in this case we fail to reject the null hypothesis
+
+![t-test_lot1](https://user-images.githubusercontent.com/107159218/191884988-16d93687-a14c-4e70-a67f-e6ef6d27ec85.PNG)
+
+For Lot2: The p-value = 0.00059 is subtantially lower than alpha = 0.05. This indicates that there is a difference between the means and in this case we fail to reject the null hypothesis
+
+![t-test_lot2](https://user-images.githubusercontent.com/107159218/191885126-09149c2c-f3bb-4155-b5d0-721909ad8872.PNG)
+
+For Lot3: The p-value = 0.1589 is higher than alpha = 0.05. This indicates that there is no difference between the mean. Hence we can reject the null hypothesis. 
+
+![t-test_lot3](https://user-images.githubusercontent.com/107159218/191885233-cd303fff-c421-44d0-bf44-e1994f56dfcc.PNG)
+
+
+## Deliverable 4: Study Design: MechCar vs Competition
+When comparing MechaCar to its competition additional metrics that could be of interest to the customer would be; sale price, maintenance cost, safety rating, fuel economy. 
+
+1. What metric are you going to test? 
+Safety is considered fairly highly by consumers. I would test safety ratings compared to competition. Fuel mileage and cost of maintenance would also be strongly considered. 
+
+2. What is the null hypothesis or alternative hypothesis?
+ The null hypothesis would suggest that the mean of safety rating is equal to zero. The alternate hypothesis would be the mean of safety rating is not equal to zero.
  
-### Various features of the code
-  * How to get candidate vote count
+ 3. What statistical test would you use to test the hypothesis?
+ Comparing the effect of variables on safet rating can be studied by applying multiple linear regression analysis to MechaCar and its competitors.
  
- ![Code Candidate vote count](https://user-images.githubusercontent.com/107159218/176787617-18729b4d-f7fc-45b2-b9c1-f8c46c1c9dea.JPG)
-
-  * How to get county vote count
- 
- ![Code_countyvote count](https://user-images.githubusercontent.com/107159218/176787653-9dc5d13d-2cc9-4b7e-ad4d-94774a4a4e1e.JPG)
-
-  * How to get candidate votes percentage
- 
- ![Code_Candidate votes and their percentage](https://user-images.githubusercontent.com/107159218/176787717-54dc6077-5213-42a3-b38d-d2ef5ffb072c.JPG)
-
-  * How to get county vote percentage
- 
-![Code_percentage of county votes](https://user-images.githubusercontent.com/107159218/176787780-d7fbdc41-35c7-4745-b9b6-1f68e7e2f016.JPG)
-
-  * How to get total votes casted
-  
- ![Code_total vote count](https://user-images.githubusercontent.com/107159218/176787828-ebb1f835-095e-4e80-9e57-3bc9e8898b37.JPG)
-
- 
-### Election Audit Summary
-  * The script could be modifed for a national level elections, for example in this audit we declared a dictionary with *key=county* and *value=votes*. In a similar fashion we could use a dictionary of list with *key=states* and *values=[list of counties]*
-  * We could also use modify the script to iterate over results from past years or they type of ballots cast (mail in, hand counted or computer counted) which could provide more statistical information and reveal any underlying trends or preferences 
+ 4. What data is needed to run the statistical test? 
+ A sample size of 50 should be used and applied to the metrics such as sale price, maintenance cost, safety ratings and fuel economy. The data generated from this sample size should provide an adequate sampling for a resonable analysis. 
